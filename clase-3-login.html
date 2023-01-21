@@ -51,23 +51,19 @@
            justify-self: center;
            display: none;
         }
-        .title{
-            font-size:var(--lg);
-            margin-bottom: 12px;
-            text-align: center;
-        }
-
-        .subtitle{
-            color: var(--very-ligth-pink);
-            font-size: var(--md);
-            font-weight: 300;
-            margin-bottom: 32px;
-
-        }
+   
 
         .form{
             display: flex;
             flex-direction: column;   
+        }
+
+        .form a{
+            color: var(--hospital-green);
+            font-size: var(--sm);
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 52px;
         }
 
         .label{
@@ -84,6 +80,11 @@
             font-size: var(--md);
             padding: 6px;
             margin-bottom: 12px;
+            margin-bottom: 52px;
+        }
+
+        .input-email{
+            margin-bottom: 22px;
         }
 
         .primary-button{
@@ -91,6 +92,18 @@
             border-radius: 8px;
             border: none;
             color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        } 
+
+        .secondary-button{
+            background-color: var(--white);
+            border-radius: 8px;
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
             width: 100%;
             cursor: pointer;
             font-size: var(--md);
@@ -108,6 +121,11 @@
             .logo{
                 display: block;
             }
+
+            .form {
+                margin-bottom: 72px;
+            }
+
         }
     </style>
 </head>
@@ -116,18 +134,18 @@
     <div class="login">
         <div class="form-container">
             <img class="logo" alt="logo" src="./logos/logo_yard_sale.svg" alt="">
-            <h1 class="title">Create a new password</h1>
-            <p class="subtitle"> Enter a new password for your acount</p>
 
             <form action="" class="form">
+                <label for="email" class="label">Email adress</label>
+                <input type="text" id="email" placeholder="algo@test.com" class="input input-email" />
+
                 <label for="password" class="label">Password</label>
                 <input type="password" id="password" placeholder="******" class="input input-password" />
 
-                <label for="new-password" class="label">Re-enter password</label>
-                <input type="password" id="new-password" placeholder="******" class="input input-password" />
-
-                <input type="submit" value="Confirm" class="primary-button login-button " />
+                <input type="submit" value="Log in" class="primary-button login-button " />
+                <a href="/">Forgot my password</a>
             </form>
+            <button class="secondary-button signup">Sign up</button>
         </div>
     </div>
 </body>
